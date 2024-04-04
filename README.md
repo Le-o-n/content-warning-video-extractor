@@ -1,4 +1,5 @@
 # Content Warning Video Extractor
+<img src="https://github.com/Le-o-n/content-warning-video-extractor/assets/41658797/e796361a-7090-4bf6-8e34-5b7c73176c99" width="750">
 
 The Content Warning Video Extractor tool is designed to retrieve and convert all video recordings from the game [Content Warning](https://store.steampowered.com/app/2881650/Content_Warning/), including those that might have been lost. It efficiently converts videos from the `.webm` file format to the more widely used `.mp4` format, ensuring compatibility and ease of access.
 
