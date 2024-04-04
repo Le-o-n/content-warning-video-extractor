@@ -1,6 +1,6 @@
 # Content Warning Video Extractor
 
-The Content Warning Video Extractor tool is designed to retrieve and convert all video recordings from the game [Content Warning](https://store.steampowered.com/app/2881650/Content_Warning/) including those that might have been lost. It efficiently converts videos from the `.webm` file format to the more widely used `.mp4` format, ensuring compatibility and ease of access.
+The Content Warning Video Extractor tool is designed to retrieve and convert all video recordings from the game [Content Warning](https://store.steampowered.com/app/2881650/Content_Warning/), including those that might have been lost. It efficiently converts videos from the `.webm` file format to the more widely used `.mp4` format, ensuring compatibility and ease of access.
 
 ## Download the Executable
 
