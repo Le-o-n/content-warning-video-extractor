@@ -44,6 +44,6 @@ The executable includes the entire Python runtime to ensure it operates as a sta
 
 Some antivirus programs might mistakenly flag the executable as malware. If this occurs, you have the option to run the tool directly using Python, as described in the "Running via Python" section.
 
-### Support My Work
+## Support My Work
 If you appreciate this tool, consider buying me a coffee. Here is my [Paypal](https://paypal.me/LeonB923). Thank you!
 
