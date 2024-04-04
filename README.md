@@ -10,7 +10,7 @@ You can download the latest version of the executable from the [Releases](https:
 
 ### Running via the Executable
 
-1. Download and run the executable file.
+1. Download and run the executable file found in the [Releases](https://github.com/Le-o-n/content-warning-video-extractor/releases/) section of this repository.
 2. The tool automatically searches for the directory containing the videos.
 3. Extracted videos will be saved in an "output" folder, located in the same directory as the executable.
 
@@ -43,3 +43,7 @@ The executable includes the entire Python runtime to ensure it operates as a sta
 ### Executable flagged as malware?
 
 Some antivirus programs might mistakenly flag the executable as malware. If this occurs, you have the option to run the tool directly using Python, as described in the "Running via Python" section.
+
+### Support My Work
+If you appreciate this tool, consider buying me a coffee. Here is my [Paypal](https://paypal.me/LeonB923). Thank you!
+
