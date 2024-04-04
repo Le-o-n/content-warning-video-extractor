@@ -1,1 +1,3 @@
 output/*.mp4
+build/*
+*.spec
