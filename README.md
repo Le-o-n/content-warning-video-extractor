@@ -4,7 +4,7 @@ The Content Warning Video Extractor tool is designed to retrieve and convert all
 
 ## Download the Executable
 
-You can download the latest version of the executable from the [Releases](https://github.com/your-repository-link/releases) section of this repository.
+You can download the latest version of the executable from the [Releases](https://github.com/Le-o-n/content-warning-video-extractor/releases/) section of this repository.
 
 ## Usage Instructions
 
