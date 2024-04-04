@@ -32,7 +32,7 @@ To build the executable yourself:
 1. Install Python 3 and add it to your PATH as described above.
 2. Execute `install_requirements.bat` to set up the required libraries.
 3. Run `build.bat` to initiate the build process.
-4. The newly built executable will be available in the `build` folder.
+4. The newly built executable will be available in the `build` folder that get's created.
 
 ## FAQ
 
