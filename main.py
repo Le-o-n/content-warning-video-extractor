@@ -3,6 +3,22 @@ from os import path
 from moviepy.editor import VideoFileClip
 from moviepy.editor import concatenate_videoclips
 
+
+print("||===================================================================================||")
+print("||      ___            _             _     __    __                 _                ||")
+print("||     / __\___  _ __ | |_ ___ _ __ | |_  / / /\ \ \__ _ _ __ _ __ (_)_ __   __ _    ||")
+print("||    / /  / _ \| '_ \| __/ _ \ '_ \| __| \ \/  \/ / _` | '__| '_ \| | '_ \ / _` |   ||")
+print("||   / /__| (_) | | | | ||  __/ | | | |_   \  /\  / (_| | |  | | | | | | | | (_| |   ||")
+print("||   \____/\___/|_| |_|\__\___|_| |_|\__|   \/  \/ \__,_|_|  |_| |_|_|_| |_|\__, |   ||")
+print("||                                                                          |___/    ||")
+print("||                          Video Extraction Tool                                    ||")
+print("||===================================================================================||")
+print("||                                                                                   ||")
+print("|| This tool collects all currently available videos from the last or current server ||")
+print("|| you are on. Run each time you want to collect the videos.                         ||")
+print("||                                                                                   ||")
+print("||===================================================================================||")
+
 # .../AppData/Roaming
 APP_DATA_PATH: str = os.getenv('APPDATA')
 # .../AppData/Local
@@ -18,6 +34,17 @@ if not path.exists(REC_DIR):
     print(f"The directory {REC_DIR} does not exist.")
 else:
     rec_dirs = os.listdir(REC_DIR)
+    num_videos: int = len(rec_dirs)
+
+    print("\n\n\n\n\n")
+    print("||===================================================================================||")
+    print("||                                     Log                                           ||")
+    print("||===================================================================================||")
+
+    if num_videos == 0:
+        print(" No videos found, make sure to run this before joining a new server.")
+        input(" Press any key to close...")
+        exit()
 
     for i, rec_full_recording_folder in enumerate(rec_dirs):
 
@@ -99,3 +126,7 @@ else:
             final_clip.write_videofile(out_recording_file_path)
             # close the handle to the file
             final_clip.close()
+
+print(f" Finished extraction of the {num_videos} video(s).")
+print(f" The videos are found in the directory {OUTPUT_FOLDER}")
+input(" Press any key to close...")
