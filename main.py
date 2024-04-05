@@ -40,8 +40,6 @@ if user_input == "b":
 if user_input == "c":
     num_threads = 1
 
-print("||===================================================================================||")
-
 start_time: int = time.time()
 # .../AppData/Roaming
 APP_DATA_PATH: str = os.getenv('APPDATA')
