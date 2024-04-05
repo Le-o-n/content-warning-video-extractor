@@ -2,7 +2,7 @@ import os
 from os import path
 from moviepy.editor import VideoFileClip
 from moviepy.editor import concatenate_videoclips
-
+import time
 
 print("||===================================================================================||")
 print("||      ___            _             _     __    __                 _                ||")
@@ -18,7 +18,31 @@ print("|| This tool collects all currently available videos from the last or cur
 print("|| you are on. Run each time you want to collect the videos.                         ||")
 print("||                                                                                   ||")
 print("||===================================================================================||")
+print("|| Please select how resource intensive this extraction is.                          ||")
+print("||===================================================================================||")
+print("|| Choose Option 'a', 'b', 'c' or 'd':                                               ||")
+print("||   (a) Fastest (Fast + High CPU Load)                                              ||")
+print("||   (b) Medium (Ok Speed + Ok CPU Load)                                             ||")
+print("||   (c) Slowest (Slow + Low CPU Load)                                               ||")
+print("||   (d) Default                                                                     ||")
 
+
+valid_answer: bool = False
+user_input: str = ""
+while not valid_answer:
+
+    user_input: str = input(": ").lower()
+    valid_answer = user_input in ["a", "b", "c", "d"]
+
+num_threads: int = 0
+if user_input == "b":
+    num_threads = 2
+if user_input == "c":
+    num_threads = 1
+
+print("||===================================================================================||")
+
+start_time: int = time.time()
 # .../AppData/Roaming
 APP_DATA_PATH: str = os.getenv('APPDATA')
 # .../AppData/Local
@@ -36,7 +60,6 @@ else:
     rec_dirs = os.listdir(REC_DIR)
     num_videos: int = len(rec_dirs)
 
-    print("\n\n")
     print("||===================================================================================||")
     print("||                                     Log                                           ||")
     print("||===================================================================================||")
@@ -74,7 +97,7 @@ else:
             # create VideoFileClip object for webm file
             clip: VideoFileClip = VideoFileClip(recording_file_path)
             # write as mp4 file in output folder
-            clip.write_videofile(out_recording_file_path)
+            clip.write_videofile(out_recording_file_path, threads=num_threads)
             # close handle to file
             clip.close()
         else:
@@ -123,10 +146,11 @@ else:
             # concatenate all the sub-clips into one clip
             final_clip: VideoFileClip = concatenate_videoclips(clips)
             # write this to the output director
-            final_clip.write_videofile(out_recording_file_path)
+            final_clip.write_videofile(out_recording_file_path, threads=num_threads)
             # close the handle to the file
             final_clip.close()
-
-print(f" Finished extraction of the {num_videos} video(s).")
+end_time: int = time.time()
+elapsed_time: int = end_time - start_time
+print(f" Finished extraction of the {num_videos} video(s) in {elapsed_time} seconds.")
 print(f" The videos are found in the directory {OUTPUT_FOLDER}")
 input(" Press any key to close...")
